@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="az">
 <head>
     <meta charset="UTF-8">
-    <title>Kasa Oyunu</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Gift</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 20px; }
-        button { padding: 15px 30px; font-size: 18px; cursor: pointer; }
+        body { background-color: #1c2128; color: white; font-family: sans-serif; margin: 0; padding: 15px; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .star-box { background: #2d333b; padding: 5px 15px; border-radius: 20px; display: flex; align-items: center; }
+        .chest-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; }
+        .chest { background: #2d333b; padding: 20px; border-radius: 10px; min-width: 100px; text-align: center; }
+        .btn-spin { background: #0088cc; color: white; width: 100%; padding: 15px; border: none; border-radius: 8px; font-size: 16px; margin: 20px 0; cursor: pointer; }
+        .prize-item { background: #2d333b; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
     </style>
 </head>
 <body>
-    <h1>Kasa Açma Oyunu</h1>
-    <button id="spinBtn">Kasanı Çevir</button>
+    <div class="header">
+        <strong>Rustemzade Bayram</strong>
+        <div class="star-box">⭐ 2 ➕</div>
+    </div>
 
-    <script>
-        let tg = window.Telegram.WebApp;
-        tg.expand();
+    <div class="chest-container">
+        <div class="chest">🎁<br>413</div>
+        <div class="chest">🍰<br>550</div>
+    </div>
 
-        document.getElementById('spinBtn').addEventListener('click', () => {
-            alert("Kasa çevrilir...");
-        });
-    </script>
+    <button class="btn-spin">Try Your Luck - 0 ⭐</button>
+
+    <h3>Main prize</h3>
+    <div class="prize-item"><span>Helmet</span> <span>⭐ 32183</span></div>
+
+    <h3>Other prizes</h3>
+    <div class="prize-item"><span>Diamond</span> <span>⭐ 22006</span></div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
