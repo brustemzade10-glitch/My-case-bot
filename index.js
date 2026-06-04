@@ -6,7 +6,7 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(msg.chat.id, "Kasanı açmaq üçün aşağıdakı düyməni sıx!", {
         reply_markup: {
             inline_keyboard: [[
-                { text: "Kasanı Aç", web_app: { url: "https://google.com" } }
+                { text: "Kasanı Aç", web_app: { url: "https://my-case-bot.vercel.app/" } }
             ]]
         }
     });
